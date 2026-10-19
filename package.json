@@ -1,0 +1,26 @@
+{
+  "name": "zyrog2i-pcm-deployment-mcp",
+  "version": "2.0.0",
+  "description": "ZyroG2i Persistent Context Manager (PCM) & Task Maxer Deployment MCP Server (MVP v2)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "pcm-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "build:native": "node scripts/build.cjs --native-only",
+    "build": "node scripts/build.cjs",
+    "typecheck": "node scripts/typecheck.cjs",
+    "start": "node dist/index.js",
+    "test": "node scripts/run-tests.cjs",
+    "test:unit": "node scripts/run-tests.cjs unit",
+    "test:integration": "node scripts/run-tests.cjs integration",
+    "test:security": "node scripts/run-tests.cjs security"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
